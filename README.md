@@ -12,7 +12,7 @@ composer require tombroucke/otomaties-wp-cron-basic-auth
 In .env on staging website: 
 
 ```
-BASIC_AUTH_USER='your-basic-auth-usernam'
+BASIC_AUTH_USER='your-basic-auth-username'
 BASIC_AUTH_PASS='your-basic-auth-your-password'
 ```
 
