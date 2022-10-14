@@ -1,0 +1,21 @@
+{
+    "name": "tombroucke/otomaties-wp-cron-basic-auth",
+    "description": "Fix for WP Cron when using Basic Auth",
+    "type": "wordpress-muplugin",
+    "authors": [
+        {
+            "name": "Tom Broucke",
+            "email": "tom@tombroucke.be"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "szepeviktor/phpstan-wordpress": "^1.1"
+    },
+    "scripts": {
+        "test": [
+            "phpcs --standard=PSR2 otomaties-wp-cron-basic-auth.php",
+            "vendor/bin/phpstan analyze otomaties-wp-cron-basic-auth.php"
+        ]
+    }
+}
