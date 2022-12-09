@@ -6,7 +6,7 @@ namespace Otomates\WpCronBasicAuth;
  * Description:     Fix for WP Cron when using Basic Auth
  * Author:          Tom Broucke
  * Author URI:      https://tombroucke.be
- * Version:         1.0.0
+ * Version:           1.1.0
  * Text Domain:     wp-cron-basic-auth
  * Domain Path:     /lang
  * License:         GPL v2 or later
