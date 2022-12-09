@@ -1,16 +1,16 @@
 <?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 namespace Otomates\WpCronBasicAuth;
 
-/*
-    Plugin Name: Otomaties WP Cron Basic Auth
-    Description: Fix for WP Cron when using Basic Auth
-    Author: Tom Broucke
-    Author URI: https://tombroucke.be
-    Version: 1.0
-    Text Domain: wp-cron-basic-auth
-    Domain Path: /languages
-    License: GPL v2 or later
-*/
+/**
+ * Plugin Name:     Otomaties WP Cron Basic Auth
+ * Description:     Fix for WP Cron when using Basic Auth
+ * Author:          Tom Broucke
+ * Author URI:      https://tombroucke.be
+ * Version:         1.0.0
+ * Text Domain:     wp-cron-basic-auth
+ * Domain Path:     /lang
+ * License:         GPL v2 or later
+ */
 
 class Authenticator
 {
