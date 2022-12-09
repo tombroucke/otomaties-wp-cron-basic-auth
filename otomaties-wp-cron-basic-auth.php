@@ -40,9 +40,33 @@ class Authenticator
         
         return $cronRequestArray;
     }
+
+    /**
+     * Find variable in environment
+     *
+     * @param string $variableName
+     * @return string|null
+     */
+    public static function findVariable(string $variableName) : ?string
+    {
+        if (defined($variableName)) {
+            return constant($variableName);
+        }
+        if (isset($_SERVER[$variableName])) {
+            return $_SERVER[$variableName];
+        }
+        if (isset($_ENV[$variableName])) {
+            return $_ENV[$variableName];
+        }
+        
+        return null;
+    }
 }
 
-if (isset($_SERVER['BASIC_AUTH_USER']) && isset($_SERVER['BASIC_AUTH_PASS'])) {
-    $authenticator = new Authenticator($_SERVER['BASIC_AUTH_USER'], $_SERVER['BASIC_AUTH_PASS']);
+$basicAuthUser = Authenticator::findVariable('BASIC_AUTH_USER');
+$basicAuthPass = Authenticator::findVariable('BASIC_AUTH_PASS');
+
+if ($basicAuthUser && $basicAuthPass) {
+    $authenticator = new Authenticator($basicAuthUser, $basicAuthPass);
     add_filter('cron_request', [$authenticator, 'addBasicAuthHeader']);
 }

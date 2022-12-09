@@ -16,13 +16,6 @@ BASIC_AUTH_USER='your-basic-auth-username'
 BASIC_AUTH_PASS='your-basic-auth-your-password'
 ```
 
-In config/staging.php:
-
-```php
-Config::define('BASIC_AUTH_USER', $_SERVER['BASIC_AUTH_USER'] ?? null);
-Config::define('BASIC_AUTH_PASS', $_SERVER['BASIC_AUTH_PASS'] ?? null);
-```
-
 ### Vanilla WP
 In wp-config.php
 
