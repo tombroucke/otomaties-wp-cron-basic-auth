@@ -42,7 +42,7 @@ class Authenticator
     }
 }
 
-if (defined('BASIC_AUTH_USER') && defined('BASIC_AUTH_PASS')) {
-    $authenticator = new Authenticator(constant('BASIC_AUTH_USER'), constant('BASIC_AUTH_PASS'));
+if (isset($_SERVER['BASIC_AUTH_USER']) && isset($_SERVER['BASIC_AUTH_PASS'])) {
+    $authenticator = new Authenticator($_SERVER['BASIC_AUTH_USER'], $_SERVER['BASIC_AUTH_PASS']);
     add_filter('cron_request', [$authenticator, 'addBasicAuthHeader']);
 }
