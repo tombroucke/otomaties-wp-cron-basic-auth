@@ -15,7 +15,7 @@
     "scripts": {
         "test": [
             "phpcs --standard=PSR2 otomaties-wp-cron-basic-auth.php",
-            "vendor/bin/phpstan analyze otomaties-wp-cron-basic-auth.php"
+            "vendor/bin/phpstan analyze otomaties-wp-cron-basic-auth.php --memory-limit=512M"
         ]
     }
 }
